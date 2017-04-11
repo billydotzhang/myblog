@@ -1,6 +1,43 @@
-# myblog
+# Myblog
 
 > A Vue.js project
+
+##Tree
+
+```
+|-- build
+|   |-- build.js 
+|   |-- check-version.js
+|   |-- dev-client.js
+|   |-- dev-server.js
+|   |-- utils.js
+|   |-- vue-loader.conf.js
+|   |-- webpack.base.conf.js
+|   |-- webpack.dev.conf.js
+|   `-- webpack.prod.conf.js
+|-- config
+|-- src
+|   |-- assets
+|   |-- components
+|   |   |-- Display.vue
+|   |   |-- Hello.vue
+|   |   |-- increment.vue
+|   |   |-- VuexApp.vue
+|   |   `-- index.vue
+|   |-- router
+|   |   `-- index.js
+|   |-- vuex
+|   |   |-- action.js
+|   |   |-- getters.js
+|   |   `-- store.js
+|   |-- App.vue
+|   `-- main.js
+|-- static
+|-- test
+|-- index.html
+|-- package.json
+|-- README.md
+```
 
 ## Build Setup
 

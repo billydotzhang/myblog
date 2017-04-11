@@ -2,7 +2,7 @@
 
 > A Vue.js project
 
-##Tree
+## Tree
 
 ```
 |-- build

@@ -3,7 +3,9 @@
 import Vue from 'vue'
 import routes from './router'
 import VueRouter from 'vue-router'
-// import  store from './store'
+import store from './store'
+import './assets/style/common.less'
+import '../config/rem'
 // import ajax from '../config/ajax'
 
 
@@ -15,7 +17,7 @@ const router = new VueRouter({
 
 /* eslint-disable no-new */
 new Vue({
-  router
-  // store,
+  router,
+  store,
 }).$mount('#app')
 

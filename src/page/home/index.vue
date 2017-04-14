@@ -1,12 +1,14 @@
 <template>
     <div class="home_container">
-        12312321
-        撒的发大水发
+        <itemcontainer father-component="home">
+          1231
+        </itemcontainer>
     </div>
 </template>
 <style>
     body{
         background-color:yellow;
+        font-size:16px;
     }
 </style>
 <script>

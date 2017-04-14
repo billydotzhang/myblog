@@ -23,6 +23,7 @@
             <span class="next_item button_style" @click="nextItem" v-if="itemNum < itemDetail.length"></span>
             <span class="submit_item button_style" v-else @click="submitAnswer"></span>
         </div>
+      123
     </section>
 </template>
 
@@ -30,57 +31,57 @@
     import { mapState, mapActions } from 'vuex'
     export default {
         name: 'itemcontainer',
-//        data() {
-//            return {
-//                itemId: null,
-//                choosedNum: null,
-//                choosedId:null
-//            }
-//        },
-//        props:['fatherComponent'],
-//        computed: mapState({
-//            itemNum: state => state.itemNum,
-//            level: state => state.level,
-//            itemDetail: state => state.itemDetail
-//        }),
-//        methods: {
-//            nextItem: function (){
-//                if (this.choosedNum !== null) {
-//                    this.choosedNum = null;
-//                    this.$store.dispatch('addNum',this.choosedId)
-//                }else{
-//                    alert('您还没有选择答案哦')
-//                }
-//            },
-//            chooseType: type => {
-//                switch(type){
-//                    case 0: return 'A';
-//                    case 1: return 'B';
-//                    case 2: return 'C';
-//                    case 3: return 'D';
-//                }
-//            },
-//            choosed: function (type,id){
-//                this.choosedNum = type;
-//                this.choosedId = id;
-//            },
-//            submitAnswer: function (){
-//                if (this.choosedNum !== null) {
-//                    this.$store.dispatch('addNum',this.choosedId)
-//                    clearInterval(this.$store.state.timer)
-//                    this.$router.push('score')
-//                }else{
-//                    alert('您还没有选择答案哦')
-//                }
-//            },
-//        },
-//        created(){
-//            this.$store.dispatch('initializeData');
-//            if(this.$store.state.itemDetail.length == 0){
-//                this.$store.dispatch('getData');
-//            }
+        data() {
+            return {
+                itemId: null,
+                choosedNum: null,
+                choosedId:null
+            }
+        },
+        props:['fatherComponent'],
+        computed: mapState({
+            itemNum: state => state.itemNum,
+            level: state => state.level,
+            itemDetail: state => state.itemDetail
+        }),
+        methods: {
+            nextItem: function (){
+                if (this.choosedNum !== null) {
+                    this.choosedNum = null;
+                    this.$store.dispatch('addNum',this.choosedId)
+                }else{
+                    alert('您还没有选择答案哦')
+                }
+            },
+            chooseType: type => {
+                switch(type){
+                    case 0: return 'A';
+                    case 1: return 'B';
+                    case 2: return 'C';
+                    case 3: return 'D';
+                }
+            },
+            choosed: function (type,id){
+                this.choosedNum = type;
+                this.choosedId = id;
+            },
+            submitAnswer: function (){
+                if (this.choosedNum !== null) {
+                    this.$store.dispatch('addNum',this.choosedId)
+                    clearInterval(this.$store.state.timer)
+                    this.$router.push('score')
+                }else{
+                    alert('您还没有选择答案哦')
+                }
+            },
+        },
+        created(){
+            this.$store.dispatch('initializeData');
+            if(this.$store.state.itemDetail.length == 0){
+                this.$store.dispatch('getData');
+            }
 //            document.body.style.backgroundImage = 'url(./static/img/1-1.jpg)';
-//        }
+        }
     }
 </script>
 
@@ -91,7 +92,7 @@
         width: 3.25rem;
         top: -1.3rem;
         right: 1.6rem;
-        background: url(../images/WechatIMG2.png) no-repeat;
+        background: url(../assets/images/common/WechatIMG2.png) no-repeat;
         background-size: 100% 100%;
         z-index: 10;
     .num_tip{
@@ -116,12 +117,12 @@
         left: 1rem;
     }
     .home_logo{
-        background-image: url(../images/1-2.png);
+        background-image: url(../assets/images/common/1-2.png);
         background-size: 13.142rem 100%;
         background-position: right center;
     }
     .item_back{
-        background-image: url(../images/2-1.png);
+        background-image: url(../assets/images/common/2-1.png);
         background-size: 100% 100%;
     }
     .button_style{
@@ -136,13 +137,13 @@
         background-repeat: no-repeat;
     }
     .start{
-        background-image: url(../images/1-4.png);
+        background-image: url(../assets/images/common/1-4.png);
     }
     .next_item{
-        background-image: url(../images/2-2.png);
+        background-image: url(../assets/images/common/2-2.png);
     }
     .submit_item{
-        background-image: url(../images/3-1.png);
+        background-image: url(../assets/images/common/3-1.png);
     }
     .item_list_container{
         position: absolute;

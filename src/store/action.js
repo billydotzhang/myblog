@@ -1,9 +1,25 @@
-/**
- * Created by zhangcheng on 17/4/10.
- */
-// action 会收到 store 作为它的第一个参数
-// 既然我们只对事件的分发（dispatch 对象）感兴趣。（state 也可以作为可选项放入）
-// 我们可以利用 ES6 的解构（destructuring）功能来简化对参数的导入
-export const incrementCounter = function ({dispatch,state}){
-    dispatch('INCREMENT',1)
+import ajax from '../../config/ajax'
+
+export default {
+    addNum({ commit, state }, id) {
+        commit('REMBER_ANSWER', { id })
+        if (state.itemNum < state.itemDetail.length) {
+            commit('ADD_ITEMNUM', {
+                num: 1
+            })
+        }
+    },
+
+    getData({ commit, state }) {
+        ajax('GET', 'http://operating-activities.putao.com/happyfriday?active_topic_id=4').
+        then(res => {
+            commit('GET_DATA', {
+                res
+            })
+        })
+    },
+
+    initializeData({ commit }) {
+        commit('INITIALIZE_DATA')
+    }
 }

@@ -1,15 +1,18 @@
 <template>
     <div>
-        <div>this is template body</div>
+      <itemcontainer father-component="item">
+      </itemcontainer>
     </div>
 </template>
 <style>
-    body{
-        background-color:#ff0000;
-    }
 </style>
 <script>
+  import itemcontainer from '../../components/itemcontainer'
+
     export default{
-        name:'item'
+      name:'item',
+      components:{
+          itemcontainer
+      }
     }
 </script>
